@@ -10,7 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<APIFunitureStoreContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("APIFornitureStoreContext")));
+builder.Services.AddDbContext<APIFunitureStoreContext>(options =>
+                                                                    {
+                                                                        options.UseSqlite(builder.Configuration.GetConnectionString("APIFornitureStoreContext"));
+                                                                        //options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+
+                                                                        });
 
 var app = builder.Build();
 

@@ -13,5 +13,7 @@ namespace Api.FurnitureStore.Share
         public decimal Price { get; set; }
         public int ProductCategoryId { get; set; }
 
+        public List<OrderDetail> OrderDetails { get; set; }
+
     }
 }
