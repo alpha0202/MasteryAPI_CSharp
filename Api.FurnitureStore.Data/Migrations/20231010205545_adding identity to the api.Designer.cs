@@ -3,6 +3,7 @@ using System;
 using Api.FurnitureStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Api.FurnitureStore.Data.Migrations
 {
     [DbContext(typeof(APIFunitureStoreContext))]
-    partial class APIFunitureStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20231010205545_adding identity to the api")]
+    partial class addingidentitytotheapi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.11");

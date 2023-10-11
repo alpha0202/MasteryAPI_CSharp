@@ -1,4 +1,5 @@
 ﻿using Api.FurnitureStore.Share;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Api.FurnitureStore.Data
 {
-    public class APIFunitureStoreContext : DbContext
+    public class APIFunitureStoreContext : IdentityDbContext      //agregamos Identity para agregar de la herencia identity a parte de dbcontext
     {
         public APIFunitureStoreContext(DbContextOptions options) : base(options) { }
        
